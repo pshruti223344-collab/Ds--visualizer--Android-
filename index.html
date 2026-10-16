@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <title>DS Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">DS</div>
+    <div><h1>DS Visualizer</h1><p>Learn data structures visually</p></div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">INTERACTIVE LEARNING LAB</span>
+      <h2>See how data moves.</h2>
+      <p>Explore common data structures one operation at a time.</p>
+    </section>
+
+    <nav class="tabs" aria-label="Data structures">
+      <button class="tab active" data-view="stack">Stack</button>
+      <button class="tab" data-view="queue">Queue</button>
+      <button class="tab" data-view="list">Linked List</button>
+      <button class="tab" data-view="search">Search</button>
+      <button class="tab" data-view="sort">Sort</button>
+    </nav>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div><span class="eyebrow" id="topicLabel">LIFO • LAST IN, FIRST OUT</span><h3 id="topicTitle">Stack Visualizer</h3></div>
+        <button id="resetBtn" class="quiet-btn">Reset</button>
+      </div>
+      <p id="topicDescription" class="description">The last item you add is the first item removed.</p>
+      <div id="visual" class="visual" aria-live="polite"></div>
+      <div class="controls" id="controls"></div>
+      <div class="status" id="status" role="status">Ready. Add a value to begin.</div>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card"><span class="info-icon">⌁</span><h4>What to notice</h4><p id="notice">Stack operations happen at the top.</p></article>
+      <article class="info-card"><span class="info-icon">⏱</span><h4>Complexity</h4><p id="complexity">Push: O(1) · Pop: O(1)</p></article>
+    </section>
+    <footer>DS Visualizer • Educational project • Works offline after installation</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
